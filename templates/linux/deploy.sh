@@ -52,6 +52,10 @@ rebuild_binary_npm_modules () {
       cd $package/node_modules
         gyp_rebuild_inside_node_modules
       cd ../../../
+    elif [ -d $package ]; then # Meteor 1.3
+      cd $package
+        rebuild_binary_npm_modules
+      cd ..
     fi
   done
 }
@@ -89,7 +93,13 @@ cd ${BUNDLE_DIR}/programs/server
 
 if [ -d ./npm ]; then
   cd npm
-  rebuild_binary_npm_modules
+  if [ -d ./node_modules ]; then # Meteor 1.3
+    cd node_modules
+    rebuild_binary_npm_modules
+    cd ..
+  else
+    rebuild_binary_npm_modules
+  fi
   cd ../
 fi
 
