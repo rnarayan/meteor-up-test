@@ -1,8 +1,8 @@
 # Meteor Up
 
-> This version is no longer maintaining.<br/>
-> [Mupx](https://github.com/arunoda/meteor-up/tree/mupx) is the stable version. <br/>
-> New development is moved to here: https://github.com/kadirahq/meteor-up.
+> This is a Meteor 1.4-ready fork of initial meteor-up project.<br/>
+> It uses Node 4.4.7 and MongoDB 3.2 by default.
+> Docker-enabled version is developed by KadiraHQ here: https://github.com/kadirahq/meteor-up.
 
 #### Production Quality Meteor Deployments
 
@@ -11,8 +11,6 @@ Meteor Up (mup for short) is a command line tool that allows you to deploy any [
 You can use install and use Meteor Up from Linux, Mac and Windows.
 
 > Screencast: [How to deploy a Meteor app with Meteor Up (by Sacha Greif)](https://www.youtube.com/watch?v=WLGdXtZMmiI)
-
-**Note:** This fork is Meteor 1.4-ready. It uses Node 4.4.7 and MongoDB 3.2 by default.
 
 **Table of Contents**
 
@@ -61,7 +59,12 @@ You can use install and use Meteor Up from Linux, Mac and Windows.
 
 ### Installation
 
-    npm install -g mup
+**Note:** These instructions are for installing this fork of meteor-up.
+
+    npm remove -g mup # Only if you already installed mup before
+    git clone https://github.com/M4v3R/meteor-up
+    cd meteor-up
+    npm install -g
 
 ### Creating a Meteor Up Project
 
