@@ -150,6 +150,12 @@ This will setup the server for the `mup` deployments. It will take around 2-5 mi
 
 This will bundle the Meteor project and deploy it to the server.
 
+#### Deploying prebuilt bundle
+
+While deploying you can omit the building phase if you already have a prebuilt bundle. Just append its path to the deploy command:
+
+    mup deploy /path/to/bundle.tar.gz
+
 ### Additional Setup/Deploy Information
 
 #### Deploy Wait Time
