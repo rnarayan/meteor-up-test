@@ -17,12 +17,12 @@
   "setupNode": true,
 
   // WARNING: If nodeVersion omitted will setup 0.10.43 by default. Do not use v, only version number.
-  "nodeVersion": "0.10.43",
+  "nodeVersion": "4.4.7",
 
   // Install PhantomJS in the server
   "setupPhantom": true,
 
-  // Show a progress bar during the upload of the bundle to the server. 
+  // Show a progress bar during the upload of the bundle to the server.
   // Might cause an error in some rare cases if set to true, for instance in Shippable CI
   "enableUploadProgressBar": true,
 

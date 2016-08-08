@@ -36,3 +36,7 @@ sudo mv ${NODE_DIST} /opt/nodejs
 
 sudo ln -sf /opt/nodejs/bin/node /usr/bin/node
 sudo ln -sf /opt/nodejs/bin/npm /usr/bin/npm
+
+# Install node-gyp and remove old files if necessary
+sudo npm install -g node-gyp
+sudo rm -rf ~/.node-gyp*

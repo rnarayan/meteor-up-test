@@ -12,6 +12,8 @@ You can use install and use Meteor Up from Linux, Mac and Windows.
 
 > Screencast: [How to deploy a Meteor app with Meteor Up (by Sacha Greif)](https://www.youtube.com/watch?v=WLGdXtZMmiI)
 
+**Note:** This fork is Meteor 1.4-ready. It uses Node 4.4.7 and MongoDB 3.2 by default.
+
 **Table of Contents**
 
 - [Features](#features)
@@ -100,7 +102,7 @@ This will create two files in your Meteor Up project directory:
   "setupNode": true,
 
   // WARNING: nodeVersion defaults to 0.10.43 if omitted. Do not use v, just the version number.
-  "nodeVersion": "0.10.43",
+  "nodeVersion": "4.4.7",
 
   // Install PhantomJS on the server
   "setupPhantom": true,
