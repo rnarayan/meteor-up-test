@@ -1,4 +1,5 @@
 #!/bin/bash
+APP_NAME="<%= appName %>"
 
 # utilities
 gyp_rebuild_inside_node_modules () {
@@ -60,13 +61,12 @@ rebuild_binary_npm_modules () {
   done
 }
 
-revert_app (){
+revert_app () {
   if [[ -d old_app ]]; then
     sudo rm -rf app
     sudo mv old_app app
     sudo stop <%= appName %> || :
     sudo start <%= appName %> || :
-
     echo "Latest deployment failed! Reverted back to the previous version." 1>&2
     exit 1
   else
@@ -137,9 +137,26 @@ echo "Waiting for MongoDB to initialize. (5 minutes)"
 . /opt/<%= appName %>/config/env.sh
 wait-for-mongo ${MONGO_URL} 300000
 
+sudo systemctl restart ${APP_NAME}.service
+
 # restart app
-sudo stop <%= appName %> || :
-sudo start <%= appName %> || :
+# sudo stop <%= appName %> || :
+# sudo start <%= appName %> || :
+
+# check upstart
+# UPSTART=0
+# if [ -x /sbin/initctl ] && /sbin/initctl version 2>/dev/null | /bin/grep -q upstart; then
+#   UPSTART=1
+# fi
+#
+# # restart app
+# echo "Restarting the app"
+# if [[ $UPSTART == 1 ]] ; then
+#   sudo stop $APP_NAME || :
+#   sudo start $APP_NAME || :
+# else
+#   sudo systemctl restart ${APP_NAME}.service
+# fi
 
 echo "Waiting for <%= deployCheckWaitTime %> seconds while app is booting up"
 sleep <%= deployCheckWaitTime %>

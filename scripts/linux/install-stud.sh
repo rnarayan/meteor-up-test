@@ -5,6 +5,7 @@ set +e
 sudo rm /var/lib/dpkg/lock > /dev/null
 sudo rm /var/cache/apt/archives/lock > /dev/null
 sudo dpkg --configure -a
+mkdir -p /etc/systemd/system
 set -e
 
 sudo apt-get update -y
