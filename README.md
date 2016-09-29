@@ -1,5 +1,6 @@
 # Meteor Up
 
+> This is a systemD ready version of the M4v3R/meteor-up fork for Ubuntu 16.04 which lacks upstart. 
 > This is a Meteor 1.4-ready fork of initial meteor-up project.<br/>
 > It uses Node 4.4.7 and MongoDB 3.2 by default.
 > Docker-enabled version is developed by KadiraHQ here: https://github.com/kadirahq/meteor-up.
