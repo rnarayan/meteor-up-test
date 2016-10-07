@@ -65,8 +65,7 @@ revert_app () {
   if [[ -d old_app ]]; then
     sudo rm -rf app
     sudo mv old_app app
-    sudo stop <%= appName %> || :
-    sudo start <%= appName %> || :
+    sudo systemctl restart <%= appName %>.service || :
     echo "Latest deployment failed! Reverted back to the previous version." 1>&2
     exit 1
   else
