@@ -1,5 +1,5 @@
 {
-  "name": "mup",
+  "name": "mup-test",
   "version": "0.11.4",
   "description": "Production Quality Meteor Deployments",
   "dependencies": {
@@ -13,12 +13,12 @@
     "uuid": "1.4.x"
   },
   "bin": {
-    "mup": "./bin/mup"
+    "mup-test": "./bin/mup"
   },
   "author": "Arunoda Susiripala <arunoda.susiripala@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rnarayan/meteor-up.git"
+    "url": "git://github.com/rnarayan/meteor-up-test.git"
   },
   "license": "MIT"
 }
